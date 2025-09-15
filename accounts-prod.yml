@@ -35,6 +35,14 @@ management:
     health:
       probes:
         enabled: true
+  eureka:
+    instance:
+      hostname: localhost
+    client:
+      fetchRegistry: true
+      registerWithEureka: true
+      serviceUrl:
+        defaultZone: http://localhost:8070/eureka/
 test:
   config:
     age: 13
