@@ -35,9 +35,19 @@ management:
     health:
       probes:
         enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "accounts"
+    description: "accounts"
+    version: "1.0.0"
 eureka:
   instance:
-    hostname: localhost
+    # hostname: localhost
+    preferIpAddress: true
   client:
     fetchRegistry: true
     registerWithEureka: true
