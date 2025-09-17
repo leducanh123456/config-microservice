@@ -45,8 +45,8 @@ management:
         enabled: true
 info:
   app:
-    name: "accounts"
-    description: "accounts"
+    name: "cards"
+    description: "cards"
     version: "1.0.0"
 eureka:
   instance:

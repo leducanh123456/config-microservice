@@ -45,8 +45,8 @@ management:
         enabled: true
 info:
   app:
-    name: "accounts"
-    description: "accounts"
+    name: "loans"
+    description: "loans"
     version: "1.0.0"
 eureka:
   instance:
