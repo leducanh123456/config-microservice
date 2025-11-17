@@ -13,9 +13,30 @@ spring:
           lower-case-service-id: true
           filters:
             - StripPrefix=1
+
       server:
         webmvc:
-          routes: []
+          routes:
+            - id: accounts_route
+              uri: lb://ACCOUNTS
+              predicates:
+                - Path=/accounts/**
+              filters:
+                - StripPrefix=1
+
+            - id: cards_route
+              uri: lb://CARDS
+              predicates:
+                - Path=/cards/**
+              filters:
+                - StripPrefix=1
+
+            - id: loans_route
+              uri: lb://LOANS
+              predicates:
+                - Path=/loans/**
+              filters:
+                - StripPrefix=1
 
 eureka:
   instance:
