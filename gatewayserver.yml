@@ -13,8 +13,9 @@ spring:
           lower-case-service-id: true
           filters:
             - StripPrefix=1
-      mvc:
-        routes: []
+      server:
+        webmvc:
+          routes: []
 
 eureka:
   instance:
