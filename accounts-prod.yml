@@ -65,3 +65,10 @@ test:
       - item134
       - item22
       - item33
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        slidingWindowSize: 20
+        failureRateThreshold: 50
+        waitDurationInOpenState: 30s
