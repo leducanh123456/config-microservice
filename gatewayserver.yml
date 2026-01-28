@@ -7,15 +7,13 @@ spring:
 
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-          filters:
-            - StripPrefix=1
-
       server:
-        webmvc:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+
           routes:
             - id: accounts_route
               uri: lb://ACCOUNTS
