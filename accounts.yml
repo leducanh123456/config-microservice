@@ -46,3 +46,13 @@ resilience4j:
         slidingWindowSize: 20
         failureRateThreshold: 50
         waitDurationInOpenState: 30s
+  retry:
+    instances:
+      getAccounts:
+        max-attempts: 3
+        wait-duration: 2s
+        retry-exceptions:
+          - java.io.IOException
+          - org.springframework.web.client.HttpServerErrorException
+        ignore-exceptions:
+          - org.springframework.web.client.HttpClientErrorException
